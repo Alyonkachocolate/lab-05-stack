@@ -16,11 +16,6 @@ class Item_1 {
     std::cout << "Item_1\n"
               << val1 << " " << val2 << " " << val3 << " " << val4 << std::endl;
   }
-
-  bool operator==(const Item_1& Item_1) const {
-    return (val1 == Item_1.val1 && val2 == Item_1.val2 && val3 == Item_1.val3 &&
-            val4 == Item_1.val4);
-  }
 };
 
 int main() {
