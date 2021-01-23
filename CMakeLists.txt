@@ -36,11 +36,15 @@ add_executable(demo
   ${CMAKE_CURRENT_SOURCE_DIR}/demo/main.cpp
 )
 
+target_link_libraries(demo ${PROJECT_NAME})
+
 target_include_directories(${PROJECT_NAME}
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
         )
 
-target_link_libraries(demo ${PROJECT_NAME})
+target_include_directories(demo
+        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
+        )
 
 if(BUILD_TESTS)
   add_executable(tests
